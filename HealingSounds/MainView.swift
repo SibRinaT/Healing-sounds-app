@@ -14,7 +14,7 @@ struct MainView: View {
                 Text("Выберите звуковую\n терапию")
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color("TextColor"))
-                    .font(.title3)
+                    .font(.custom("MontserratAlternates-Regular", size: 24))
                 Image("") // find button
             }
             ScrollView(.horizontal) {
