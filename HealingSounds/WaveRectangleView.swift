@@ -11,13 +11,14 @@ struct WaveRectangleView: View {
     @State var title: String
     @State var tag: String
     @State var tag2: String
+    @State var image: String
 
     var body: some View {
         VStack {
             Rectangle()
                 .cornerRadius(16)
                 .foregroundColor(Color("RectangleColor"))
-                .frame(height: 165)
+                .frame(minWidth: 350, minHeight: 165, maxHeight: 165)
                 .overlay {
                     VStack {
                         ZStack(alignment: .bottom) {
@@ -32,9 +33,10 @@ struct WaveRectangleView: View {
                                 Text(tag2)
                                     .font(.custom("", size: 18))
                             }
+                            .foregroundColor(Color("TextColor"))
                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                             
-                            Image("WaveImage")
+                            Image(image)
                                 .resizable()
                                 .frame(height: 100)
                                 .ignoresSafeArea(.container)
@@ -49,5 +51,5 @@ struct WaveRectangleView: View {
 }
 
 #Preview {
-    WaveRectangleView(title: "Альфа-волны", tag: "Сознательное", tag2: "Бодрствование")
+    WaveRectangleView(title: "Альфа-волны", tag: "Сознательное", tag2: "Бодрствование", image: "WaveImage")
 }
