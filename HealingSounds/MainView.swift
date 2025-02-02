@@ -34,6 +34,8 @@ struct MainView: View {
                     HStack(spacing: 0) {
                         ForEach(0..<3, id: \.self) { index in
                             WaveRectangleView(title: "Альфа-волны", tag: "Сознательное", tag2: "Бодрствование", image: "WaveImage")
+                            WaveRectangleView(title: "Бета-волны", tag: "Дремота", tag2: "Медитация", image: "WaveImage2")
+                            WaveRectangleView(title: "Тета-волны", tag: "Глубокий гипноз", tag2: "Транс", image: "WaveImage3")
                                 .id(index)
                                 .frame(width: UIScreen.main.bounds.width) // Каждый элемент занимает всю ширину экрана
                         }
