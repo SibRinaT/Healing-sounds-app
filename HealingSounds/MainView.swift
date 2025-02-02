@@ -24,16 +24,16 @@ struct MainView: View {
                                        WaveRectangleView(title: "Альфа-волны", tag: "Сознательное", tag2: "Бодрствование", image: "WaveImage")
                                        WaveRectangleView(title: "Альфа-волны", tag: "Сознательное", tag2: "Бодрствование", image: "WaveImage")
                                        WaveRectangleView(title: "Альфа-волны", tag: "Сознательное", tag2: "Бодрствование", image: "WaveImage")
-                                           .id(index) // Уникальный идентификатор для каждого элемента
+                                           .id(index)
                                    }
                                }
-                               .scrollTargetLayout() // Указываем, что это целевые элементы для привязки
+                               .scrollTargetLayout()
                            }
                            .scrollTargetBehavior(.paging)
-                           .scrollIndicators(.hidden) // Скрываем индикаторы прокрутки
+                           .scrollIndicators(.hidden)
                            .onChange(of: currentPage) { _, newPage in
                                withAnimation {
-                                   proxy.scrollTo(newPage, anchor: .center) // Прокрутка к выбранной странице
+                                   proxy.scrollTo(newPage, anchor: .center)
                                }
                            }
             }
@@ -41,9 +41,9 @@ struct MainView: View {
                 ForEach(0..<3, id: \.self) { index in
                     Circle()
                         .frame(width: 8, height: 8)
-                        .foregroundColor(currentPage == index ? .blue : .gray.opacity(0.5)) // Активная и неактивная точки
+                        .foregroundColor(currentPage == index ? .blue : .gray.opacity(0.5)) 
                         .onTapGesture {
-                            currentPage = index // Переключение на выбранную страницу
+                            currentPage = index
                         }
                 }
             }
