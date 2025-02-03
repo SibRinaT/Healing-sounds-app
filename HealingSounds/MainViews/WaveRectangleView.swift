@@ -22,6 +22,12 @@ struct WaveRectangleView: View {
                 .overlay {
                     VStack {
                         ZStack(alignment: .bottom) {
+                            Image(image)
+                                .resizable()
+                                .frame(height: 100)
+                                .ignoresSafeArea(.container)
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .clipped()
                             VStack {
                                 Text(title)
                                     .font(.title)
@@ -35,13 +41,6 @@ struct WaveRectangleView: View {
                             }
                             .foregroundColor(Color("TextColor"))
                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                            
-                            Image(image)
-                                .resizable()
-                                .frame(height: 100)
-                                .ignoresSafeArea(.container)
-                                .clipShape(RoundedRectangle(cornerRadius: 16))
-                                                               .clipped()
                         }
                     }
                 }
