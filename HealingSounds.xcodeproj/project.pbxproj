@@ -30,7 +30,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2EDE6C2A2D4A9D030027452B /* Exceptions for "HealingSounds" folder in "HealingSounds" target */ = {
+		2E97D83A2D50885000B59AC0 /* Exceptions for "HealingSounds" folder in "HealingSounds" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -43,7 +43,7 @@
 		2EDE6BB92D491F4D0027452B /* HealingSounds */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				2EDE6C2A2D4A9D030027452B /* Exceptions for "HealingSounds" folder in "HealingSounds" target */,
+				2E97D83A2D50885000B59AC0 /* Exceptions for "HealingSounds" folder in "HealingSounds" target */,
 			);
 			path = HealingSounds;
 			sourceTree = "<group>";
